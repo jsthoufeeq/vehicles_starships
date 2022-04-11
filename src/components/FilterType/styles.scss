@@ -1,0 +1,23 @@
+.filter-section {
+  background-color: #f8f9fa;
+}
+
+.vehicle-types {
+  background-color: #f4f5f9;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.filter-type {
+  cursor: pointer;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: arial, sans-serif;
+  color: black;
+
+  &:hover {
+      color: #069;
+      text-decoration: underline;
+  }
+}
