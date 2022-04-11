@@ -3,7 +3,7 @@ Vehicle and Starships application
 
 steps to run the application
  - execute 'npm i'
- - execute 'npm start'
+ - execute 'npm start' ('npm start --force' incase of error)
  - open 'http://localhost:8080/' to serve
 
 Steps to run test cases
