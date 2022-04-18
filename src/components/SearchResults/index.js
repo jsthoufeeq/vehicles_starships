@@ -9,7 +9,7 @@ import { getStarshipsList } from '../../actions/starships';
 
 const SearchResults = ({ category }) => {
 
-  const { list, filteredList, pageNumber } = useSelector((state) => {
+  const { list, filteredList, pageNumber, error } = useSelector((state) => {
     if (category === 'vehicle') return state.vehicles;
     return state.starships;
   });
@@ -27,17 +27,25 @@ const SearchResults = ({ category }) => {
     navigate(`detail/${category}/${id}`);
   }
 
+  // throw 'err' -- to check Exception component
   const listData = filteredList.length ? filteredList : list;
 
   return (
     <div className="test col-sm-9 col-xs-12 mt-3">
       <h6>Search Results</h6>
-      {list && list.length ?
-        <Fragment>
-          <List category="vehicle" details={listData} selectHandler={onSelectHandler} />
-          <Pagination category="vehicle" />
-        </Fragment>
-        : <p data-testid="no-results-element">no results found</p>}
+      {error && error.message ?
+        <div className="alert alert-warning" role="alert">
+          There has been an {error.message}
+        </div>
+        :
+        list && list.length ?
+          <Fragment>
+            <List category="vehicle" details={listData} selectHandler={onSelectHandler} />
+            <Pagination category="vehicle" />
+          </Fragment>
+          : <p data-testid="no-results-element">no results found</p>
+      }
+
     </div>
   )
 }

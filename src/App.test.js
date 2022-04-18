@@ -37,8 +37,8 @@ describe('App', () => {
       </Provider>
     );
     // screen.debug();
-    const element = screen.getByTestId('no-results-element');
-    expect(element).toHaveTextContent('no results found');
+    const element = screen.getByTitle('fallbackLazy');
+    expect(element).toHaveTextContent('fetching data...');
   });
 
   // test('renders App component with results', () => {

@@ -32,12 +32,12 @@ const Type = ({ category }) => {
     <section className="col-sm-3 col-xs-12 mt-3">
       <h6>Filter</h6>
       <section className="filter-section">
-        <ul className="list-unstyled vehicle-types">
+        <ul className="list-unstyled">
           <li>
-            <span className="filter-type">Price filter </span><input type="range" min="0" max={range} onChange={filterList} />
+            <span>Price filter </span><input type="range" min="0" max={range} onChange={filterList} />
           </li>
           <li>
-            <span className="filter-type" onClick={filterByFavourites}>favourites</span>
+            <span onClick={filterByFavourites}>favourites</span>
           </li>
         </ul>
       </section>

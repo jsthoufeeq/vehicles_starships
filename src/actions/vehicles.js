@@ -10,6 +10,7 @@ import {
   ERROR_VEHICLE
 } from '../constants/actionTypes';
 
+
 /**
  * dispatches the available vehicles
  *
@@ -66,7 +67,7 @@ export const filterByPrice = (cost) => (dispatch) => {
 }
 
 /**
- * dispatches to filter by price.
+ * dispatches to filter by favourites.
  *
  * @param {string} price
  * @returns {void}

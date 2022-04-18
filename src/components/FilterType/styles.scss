@@ -1,23 +1,25 @@
+@import './../../styles/variables';
+
 .filter-section {
-  background-color: #f8f9fa;
-}
+  background-color: $backgroundColor;
 
-.vehicle-types {
-  background-color: #f4f5f9;
-  padding: 20px;
-  list-style-type: none;
-}
+  ul {
+    background-color: $backgroundColorType;
+    padding: 20px;
+    list-style-type: none;
+  }
 
-.filter-type {
-  cursor: pointer;
-  background: none !important;
-  border: none;
-  padding: 0 !important;
-  font-family: arial, sans-serif;
-  color: black;
+  span {
+    cursor: pointer;
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    font-family: arial, sans-serif;
+    color: $textColor;
 
-  &:hover {
-      color: #069;
+    &:hover {
+      color: $highlightColor;
       text-decoration: underline;
+    }
   }
 }
