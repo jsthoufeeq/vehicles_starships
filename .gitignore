@@ -1,0 +1,18 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist/
+
+# dependencies
+/node_modules/
+
+# misc
+/.sass-cache
+/.eslintcache
+/coverage/
+/npm-debug.log*
+.DS_Store
+.vscode/
+build/
+template/src/__tests__/__snapshots__/
+.npm/
